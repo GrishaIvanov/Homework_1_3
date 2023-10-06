@@ -1,0 +1,14 @@
+
+Для создания образа с присвоением имени я использую команду:
+
+docker build . -t homework:latest
+
+где homework - имя образа.
+
+Для запуска контейнера использую команду:
+
+docker run --rm -d -p 5432:5432 --name homework_container homework:latest
+
+Подключение к работающему контейнеру с запуском интерфейса psql с помощью команды:
+
+docker exec -it homework_container psql -U postgres
