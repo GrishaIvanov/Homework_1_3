@@ -11,4 +11,8 @@ docker run --rm -d -p 5432:5432 --name homework_container homework:latest
 
 Подключение к работающему контейнеру с запуском интерфейса psql с помощью команды:
 
-docker exec -it homework_container psql -U postgres
+docker exec -it homework_container psql -U postgres -d database
+
+Для запуска механизма хренения данных в контейнере я использую каманду:
+
+VOLUME Homework_1_3:/var/lib/postgressql/Homework_1_3
